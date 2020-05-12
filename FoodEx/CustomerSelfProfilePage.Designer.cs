@@ -326,7 +326,6 @@
             // 
             // numericUpdown_money
             // 
-            this.numericUpdown_money.DecimalPlaces = 1;
             this.numericUpdown_money.Location = new System.Drawing.Point(208, 373);
             this.numericUpdown_money.Name = "numericUpdown_money";
             this.numericUpdown_money.Size = new System.Drawing.Size(124, 20);

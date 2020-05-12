@@ -29,7 +29,7 @@ namespace FoodEx
             firstpage.ShowDialog();
             if (Customer.activeCustomer == 0 && Seller.activeSeller == 0) //Program kapatildi
             {
-                this.Close();
+               this.Close();
             }
             else
             {
@@ -106,11 +106,6 @@ namespace FoodEx
         {
              string clock = DateTime.Now.ToLongTimeString();
              lbl_clock.Text = clock;
-        }
-
-        async Task UseDelay()
-        {
-            await Task.Delay(1000); // wait for 1 second
         }
 
         private void start_menu_labels()

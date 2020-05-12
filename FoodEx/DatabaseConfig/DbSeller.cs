@@ -187,7 +187,15 @@ namespace FoodEx.DatabaseConfig
                     }
                     catch (SQLiteException exception)
                     {
-                        MessageBox.Show(exception.Message);
+                        if (exception.ErrorCode == (int)SQLiteErrorCode.Constraint) //username is not unique
+                        {
+                            MessageBox.Show("Username is Already Taken!", "Sorry!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show(exception.Message);
+                        }
                     }
                 }
             }

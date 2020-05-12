@@ -234,20 +234,39 @@ namespace FoodEx
 
         public void buy_product(int product_number)
         {
-            Customer customer = new Customer();
-            customer = DbCustomer.get_customer_from_id(Customer.activeCustomer);
-            double userMoney = customer.GetMoney();
-            double price = Convert.ToInt32(lbl_product1_id.Text);
-            
-            //kaçıncı kontrolu 
 
-            if (userMoney >= price)
+            DialogResult dialog = MessageBox.Show($"Buy product.", "Okey", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
             {
-                userMoney = userMoney - price;
-                MessageBox.Show(price.ToString());
-                MessageBox.Show(userMoney.ToString());
-                customer.SetMoney(userMoney);
-                DbCustomer.UpdateCustomer(customer);
+                Customer customer = new Customer();
+                customer = DbCustomer.get_customer_from_id(Customer.activeCustomer);
+                double userMoney = customer.GetMoney();
+                double product_price;
+
+                if (product_number == 0) //kaçıncı butona(0,1,2) basıldı kontrolu 
+                {
+                    product_price = Convert.ToInt32(lbl_product0_price.Text);
+                }
+                else if (product_number == 1)
+                {
+                    product_price = Convert.ToInt32(lbl_product1_price.Text);
+                }
+                else if (product_number == 2)
+                {
+                    product_price = Convert.ToInt32(lbl_product2_price.Text);
+                }
+                else
+                {
+                    return;
+                }
+
+
+                if (userMoney >= product_price)
+                {
+                    userMoney = userMoney - product_price;
+                    customer.SetMoney(userMoney);
+                    DbCustomer.UpdateCustomer(customer);
+                }
             }
         }
 
@@ -264,7 +283,7 @@ namespace FoodEx
 
         private void btn_product2_buy_Click(object sender, EventArgs e)
         {
-
+            buy_product(2);
         }
     }
 }
