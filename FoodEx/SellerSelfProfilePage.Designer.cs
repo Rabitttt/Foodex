@@ -30,19 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerSelfProfilePage));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_slideComments_right = new System.Windows.Forms.Button();
+            this.btn_slideComments_left = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.flowLayoutPanel_comments = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel_comment1 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
+            this.panel_comment0 = new System.Windows.Forms.Panel();
+            this.lbl_comment0_createDate = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.panel_comment2 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel_comment3 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
+            this.picturebox_comment0_userimage = new System.Windows.Forms.PictureBox();
+            this.lbl_comment0_text = new System.Windows.Forms.Label();
+            this.lbl_comment0_username = new System.Windows.Forms.Label();
+            this.panel_comment1 = new System.Windows.Forms.Panel();
+            this.lbl_comment1_createDate = new System.Windows.Forms.Label();
+            this.lbl_comment1_text = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.lbl_comment1_username = new System.Windows.Forms.Label();
+            this.picturebox_comment1_userimage = new System.Windows.Forms.PictureBox();
             this.panel_productdetail = new System.Windows.Forms.Panel();
             this.cmbbox_product_type = new System.Windows.Forms.ComboBox();
             this.richTxtb_description = new System.Windows.Forms.RichTextBox();
@@ -81,9 +84,10 @@
             this.pictureBox_seller = new System.Windows.Forms.PictureBox();
             this.dataGridView_productsOfSeller = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel_comments.SuspendLayout();
+            this.panel_comment0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox_comment0_userimage)).BeginInit();
             this.panel_comment1.SuspendLayout();
-            this.panel_comment2.SuspendLayout();
-            this.panel_comment3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox_comment1_userimage)).BeginInit();
             this.panel_productdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_product)).BeginInit();
             this.panel_userdetail.SuspendLayout();
@@ -95,23 +99,27 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button2
+            // btn_slideComments_right
             // 
-            this.button2.Location = new System.Drawing.Point(1042, 220);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 42);
-            this.button2.TabIndex = 29;
-            this.button2.Text = ">";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_slideComments_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_slideComments_right.Location = new System.Drawing.Point(1042, 220);
+            this.btn_slideComments_right.Name = "btn_slideComments_right";
+            this.btn_slideComments_right.Size = new System.Drawing.Size(60, 42);
+            this.btn_slideComments_right.TabIndex = 29;
+            this.btn_slideComments_right.Text = ">";
+            this.btn_slideComments_right.UseVisualStyleBackColor = true;
+            this.btn_slideComments_right.Click += new System.EventHandler(this.btn_slideComments_right_Click);
             // 
-            // button1
+            // btn_slideComments_left
             // 
-            this.button1.Location = new System.Drawing.Point(972, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 42);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "<";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_slideComments_left.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_slideComments_left.Location = new System.Drawing.Point(972, 220);
+            this.btn_slideComments_left.Name = "btn_slideComments_left";
+            this.btn_slideComments_left.Size = new System.Drawing.Size(64, 42);
+            this.btn_slideComments_left.TabIndex = 28;
+            this.btn_slideComments_left.Text = "<";
+            this.btn_slideComments_left.UseVisualStyleBackColor = true;
+            this.btn_slideComments_left.Click += new System.EventHandler(this.btn_slideComments_left_Click);
             // 
             // label14
             // 
@@ -125,100 +133,125 @@
             // 
             // flowLayoutPanel_comments
             // 
-            this.flowLayoutPanel_comments.Controls.Add(this.panel_comment1);
-            this.flowLayoutPanel_comments.Controls.Add(this.panel_comment2);
-            this.flowLayoutPanel_comments.Controls.Add(this.panel_comment3);
+            this.flowLayoutPanel_comments.Controls.Add(this.panel_comment0);
             this.flowLayoutPanel_comments.Location = new System.Drawing.Point(769, 266);
             this.flowLayoutPanel_comments.Name = "flowLayoutPanel_comments";
             this.flowLayoutPanel_comments.Size = new System.Drawing.Size(364, 367);
             this.flowLayoutPanel_comments.TabIndex = 26;
             // 
-            // panel_comment1
+            // panel_comment0
             // 
-            this.panel_comment1.Controls.Add(this.label17);
-            this.panel_comment1.Controls.Add(this.label16);
-            this.panel_comment1.Location = new System.Drawing.Point(3, 3);
-            this.panel_comment1.Name = "panel_comment1";
-            this.panel_comment1.Size = new System.Drawing.Size(358, 117);
-            this.panel_comment1.TabIndex = 2;
+            this.panel_comment0.Controls.Add(this.lbl_comment0_createDate);
+            this.panel_comment0.Controls.Add(this.label16);
+            this.panel_comment0.Controls.Add(this.picturebox_comment0_userimage);
+            this.panel_comment0.Controls.Add(this.lbl_comment0_text);
+            this.panel_comment0.Controls.Add(this.lbl_comment0_username);
+            this.panel_comment0.Location = new System.Drawing.Point(3, 3);
+            this.panel_comment0.Name = "panel_comment0";
+            this.panel_comment0.Size = new System.Drawing.Size(358, 164);
+            this.panel_comment0.TabIndex = 3;
             // 
-            // label17
+            // lbl_comment0_createDate
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(8, 39);
-            this.label17.MaximumSize = new System.Drawing.Size(300, 300);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(300, 65);
-            this.label17.TabIndex = 1;
-            this.label17.Text = resources.GetString("label17.Text");
+            this.lbl_comment0_createDate.AutoSize = true;
+            this.lbl_comment0_createDate.Location = new System.Drawing.Point(180, 46);
+            this.lbl_comment0_createDate.Name = "lbl_comment0_createDate";
+            this.lbl_comment0_createDate.Size = new System.Drawing.Size(0, 13);
+            this.lbl_comment0_createDate.TabIndex = 4;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(4, 4);
+            this.label16.Location = new System.Drawing.Point(101, 46);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 20);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Username";
+            this.label16.Size = new System.Drawing.Size(73, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Create Date : ";
             // 
-            // panel_comment2
+            // picturebox_comment0_userimage
             // 
-            this.panel_comment2.Controls.Add(this.label20);
-            this.panel_comment2.Controls.Add(this.label21);
-            this.panel_comment2.Location = new System.Drawing.Point(3, 126);
-            this.panel_comment2.Name = "panel_comment2";
-            this.panel_comment2.Size = new System.Drawing.Size(358, 115);
-            this.panel_comment2.TabIndex = 3;
+            this.picturebox_comment0_userimage.Location = new System.Drawing.Point(8, 3);
+            this.picturebox_comment0_userimage.Name = "picturebox_comment0_userimage";
+            this.picturebox_comment0_userimage.Size = new System.Drawing.Size(76, 66);
+            this.picturebox_comment0_userimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturebox_comment0_userimage.TabIndex = 2;
+            this.picturebox_comment0_userimage.TabStop = false;
             // 
-            // label20
+            // lbl_comment0_text
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(8, 39);
-            this.label20.MaximumSize = new System.Drawing.Size(300, 300);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(37, 13);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Yorum";
+            this.lbl_comment0_text.AutoSize = true;
+            this.lbl_comment0_text.Location = new System.Drawing.Point(5, 82);
+            this.lbl_comment0_text.MaximumSize = new System.Drawing.Size(300, 300);
+            this.lbl_comment0_text.Name = "lbl_comment0_text";
+            this.lbl_comment0_text.Size = new System.Drawing.Size(0, 13);
+            this.lbl_comment0_text.TabIndex = 1;
             // 
-            // label21
+            // lbl_comment0_username
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(4, 4);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(83, 20);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Username";
+            this.lbl_comment0_username.AutoSize = true;
+            this.lbl_comment0_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_comment0_username.Location = new System.Drawing.Point(100, 12);
+            this.lbl_comment0_username.Name = "lbl_comment0_username";
+            this.lbl_comment0_username.Size = new System.Drawing.Size(83, 20);
+            this.lbl_comment0_username.TabIndex = 0;
+            this.lbl_comment0_username.Text = "Username";
             // 
-            // panel_comment3
+            // panel_comment1
             // 
-            this.panel_comment3.Controls.Add(this.label18);
-            this.panel_comment3.Controls.Add(this.label19);
-            this.panel_comment3.Location = new System.Drawing.Point(3, 247);
-            this.panel_comment3.Name = "panel_comment3";
-            this.panel_comment3.Size = new System.Drawing.Size(358, 120);
-            this.panel_comment3.TabIndex = 3;
+            this.panel_comment1.Controls.Add(this.lbl_comment1_createDate);
+            this.panel_comment1.Controls.Add(this.lbl_comment1_text);
+            this.panel_comment1.Controls.Add(this.label19);
+            this.panel_comment1.Controls.Add(this.lbl_comment1_username);
+            this.panel_comment1.Controls.Add(this.picturebox_comment1_userimage);
+            this.panel_comment1.Location = new System.Drawing.Point(769, 439);
+            this.panel_comment1.Name = "panel_comment1";
+            this.panel_comment1.Size = new System.Drawing.Size(358, 194);
+            this.panel_comment1.TabIndex = 2;
             // 
-            // label18
+            // lbl_comment1_createDate
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(8, 39);
-            this.label18.MaximumSize = new System.Drawing.Size(300, 300);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(37, 13);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Yorum";
+            this.lbl_comment1_createDate.AutoSize = true;
+            this.lbl_comment1_createDate.Location = new System.Drawing.Point(179, 51);
+            this.lbl_comment1_createDate.Name = "lbl_comment1_createDate";
+            this.lbl_comment1_createDate.Size = new System.Drawing.Size(0, 13);
+            this.lbl_comment1_createDate.TabIndex = 7;
+            // 
+            // lbl_comment1_text
+            // 
+            this.lbl_comment1_text.AutoSize = true;
+            this.lbl_comment1_text.Location = new System.Drawing.Point(8, 97);
+            this.lbl_comment1_text.MaximumSize = new System.Drawing.Size(300, 300);
+            this.lbl_comment1_text.Name = "lbl_comment1_text";
+            this.lbl_comment1_text.Size = new System.Drawing.Size(0, 13);
+            this.lbl_comment1_text.TabIndex = 1;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(4, 4);
+            this.label19.Location = new System.Drawing.Point(100, 51);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(83, 20);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Username";
+            this.label19.Size = new System.Drawing.Size(73, 13);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Create Date : ";
+            // 
+            // lbl_comment1_username
+            // 
+            this.lbl_comment1_username.AutoSize = true;
+            this.lbl_comment1_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_comment1_username.Location = new System.Drawing.Point(99, 8);
+            this.lbl_comment1_username.Name = "lbl_comment1_username";
+            this.lbl_comment1_username.Size = new System.Drawing.Size(83, 20);
+            this.lbl_comment1_username.TabIndex = 0;
+            this.lbl_comment1_username.Text = "Username";
+            // 
+            // picturebox_comment1_userimage
+            // 
+            this.picturebox_comment1_userimage.Location = new System.Drawing.Point(11, 7);
+            this.picturebox_comment1_userimage.Name = "picturebox_comment1_userimage";
+            this.picturebox_comment1_userimage.Size = new System.Drawing.Size(76, 66);
+            this.picturebox_comment1_userimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturebox_comment1_userimage.TabIndex = 5;
+            this.picturebox_comment1_userimage.TabStop = false;
             // 
             // panel_productdetail
             // 
@@ -585,6 +618,7 @@
             // 
             this.dataGridView_productsOfSeller.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView_productsOfSeller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_productsOfSeller.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView_productsOfSeller.Location = new System.Drawing.Point(365, 0);
             this.dataGridView_productsOfSeller.Name = "dataGridView_productsOfSeller";
             this.dataGridView_productsOfSeller.RowHeadersWidth = 51;
@@ -596,8 +630,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_slideComments_right);
+            this.Controls.Add(this.panel_comment1);
+            this.Controls.Add(this.btn_slideComments_left);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.flowLayoutPanel_comments);
             this.Controls.Add(this.panel_productdetail);
@@ -606,12 +641,12 @@
             this.Name = "SellerSelfProfilePage";
             this.Size = new System.Drawing.Size(1142, 641);
             this.flowLayoutPanel_comments.ResumeLayout(false);
+            this.panel_comment0.ResumeLayout(false);
+            this.panel_comment0.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox_comment0_userimage)).EndInit();
             this.panel_comment1.ResumeLayout(false);
             this.panel_comment1.PerformLayout();
-            this.panel_comment2.ResumeLayout(false);
-            this.panel_comment2.PerformLayout();
-            this.panel_comment3.ResumeLayout(false);
-            this.panel_comment3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox_comment1_userimage)).EndInit();
             this.panel_productdetail.ResumeLayout(false);
             this.panel_productdetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_product)).EndInit();
@@ -626,19 +661,16 @@
 
         #endregion
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_slideComments_right;
+        private System.Windows.Forms.Button btn_slideComments_left;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_comments;
         private System.Windows.Forms.Panel panel_comment1;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel_comment2;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Panel panel_comment3;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbl_comment1_text;
+        private System.Windows.Forms.Label lbl_comment1_username;
+        private System.Windows.Forms.Panel panel_comment0;
+        private System.Windows.Forms.Label lbl_comment0_text;
+        private System.Windows.Forms.Label lbl_comment0_username;
         private System.Windows.Forms.Panel panel_productdetail;
         private System.Windows.Forms.RichTextBox richTxtb_description;
         private System.Windows.Forms.Label lbl_product_createDate;
@@ -676,5 +708,11 @@
         private System.Windows.Forms.TextBox txtb_companyname;
         private System.Windows.Forms.RichTextBox richTxtb_address;
         private System.Windows.Forms.ComboBox cmbbox_product_type;
+        private System.Windows.Forms.Label lbl_comment0_createDate;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.PictureBox picturebox_comment0_userimage;
+        private System.Windows.Forms.Label lbl_comment1_createDate;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.PictureBox picturebox_comment1_userimage;
     }
 }

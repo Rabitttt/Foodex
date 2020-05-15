@@ -95,17 +95,20 @@ namespace FoodEx
             ShowAppDescriptionPage();
         }
 
-        private void menuItem_Logout_Click(object sender, EventArgs e) //Customer ve Seller id si varsa 0 a çekiyoruz, aktif kullanıcı bulunmamış oluyor
+        private void menuItem_Logout_Click(object sender, EventArgs e) //programı yeniden başlattık giriş ekranına döndü.
         {
-            Customer.activeCustomer = 0;
-            Seller.activeSeller = 0;
-            OpenPageControl(); //açılış sayfasına donmesini sağlar
+            Application.Restart();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
              string clock = DateTime.Now.ToLongTimeString();
              lbl_clock.Text = clock;
+             
+            if(Customer.activeCustomer != 0)
+            {
+                lbl_active_usermoney.Text = DbCustomer.get_customer_from_id(Customer.activeCustomer).GetMoney().ToString(); //menudeki para değiştiğinde güncelleyebilmek için
+            }
         }
 
         private void start_menu_labels()
@@ -130,5 +133,6 @@ namespace FoodEx
 
             }
         }
+
     }
 }

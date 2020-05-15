@@ -60,6 +60,7 @@
             // 
             // cmbbox_type
             // 
+            this.cmbbox_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbox_type.FormattingEnabled = true;
             this.cmbbox_type.Items.AddRange(new object[] {
             "Drinks",
@@ -171,7 +172,6 @@
 
         private System.Windows.Forms.TextBox txtb_price;
         private System.Windows.Forms.RichTextBox richtxtBox_description;
-        private System.Windows.Forms.ComboBox cmbbox_type;
         private System.Windows.Forms.TextBox txtb_name;
         private System.Windows.Forms.PictureBox picturBox_productimage;
         private System.Windows.Forms.Label lbl_description;
@@ -180,5 +180,6 @@
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ComboBox cmbbox_type;
     }
 }

@@ -19,13 +19,17 @@ namespace FoodEx
             InitializeComponent();
             product = DbProduct.get_product_from_id(product_id);
             fill_product_details();
-            if(Seller.activeSeller != 0)
+            if(Seller.activeSeller != 0) //satıcı hesabi ise satın al butonlarını göremesini engelliyoruz
             {
                 btn_buy.Enabled = false;
                 btn_GivePoint.Enabled = false;
             }
+            fill_comments();
         }
-        
+
+        List<Comment> comments_list = new List<Comment>();
+        private int list_index = 1;
+
         private void fill_product_details()
         {
             lbl_id.Text = product.GetId().ToString();
@@ -40,6 +44,53 @@ namespace FoodEx
 
         private void fill_comments()
         {
+            comments_list = DbComment.comments_of_product(product.GetId());
+
+            lbl_comment0_username.ForeColor = Color.Black;
+            lbl_comment1_username.ForeColor = Color.Black;
+
+            try
+            {
+                //1. yorum paneli
+                if (comments_list[list_index - 1].GetSeller().GetId() != 0) //satıcı yorumu ise satıcının adını renkli bastırıcak
+                {
+                    lbl_comment0_username.Text = comments_list[list_index - 1].GetSeller().GetName();
+                    lbl_comment0_username.ForeColor = Color.Salmon;
+                    lbl_comment0_text.Text = comments_list[list_index - 1].GetText();
+                }
+                if (comments_list[list_index - 1].GetCustomer().GetId() != 0)
+                {
+                    lbl_comment0_username.Text = comments_list[list_index - 1].GetCustomer().GetName();
+                    lbl_comment0_username.ForeColor = Color.Black;
+                    lbl_comment0_text.Text = comments_list[list_index - 1].GetText();
+                }
+            }
+            catch (Exception)
+            {
+                lbl_comment0_username.Text = "";
+                lbl_comment0_text.Text = "";
+            }
+            try
+            {
+                //2. yorum paneli
+                if (comments_list[list_index].GetSeller().GetId() != 0)
+                {
+                    lbl_comment1_username.Text = comments_list[list_index].GetSeller().GetName();
+                    lbl_comment1_username.ForeColor = Color.Salmon;
+                    lbl_comment1_text.Text = comments_list[list_index].GetText();
+                }
+                if (comments_list[list_index].GetCustomer().GetId() != 0)
+                {
+                    lbl_comment1_username.Text = comments_list[list_index].GetCustomer().GetName();
+                    lbl_comment1_username.ForeColor = Color.Black;
+                    lbl_comment1_text.Text = comments_list[list_index].GetText();
+                }
+            }
+            catch (Exception)
+            {
+                lbl_comment1_username.Text = "";
+                lbl_comment1_text.Text = "";
+            }   
 
         }
 
@@ -60,5 +111,22 @@ namespace FoodEx
             DbComment.add_comment(comment);
         }
 
+        private void btn_slideComments_left_Click(object sender, EventArgs e)
+        {
+            if(list_index > 1) // listenin başına gelindiğinde dursun , index -1 e vs. inmesin
+            {
+                list_index -= 2;
+                fill_comments();
+            }
+        }
+
+        private void btn_slideComments_right_Click(object sender, EventArgs e)
+        {
+            if(comments_list.Count > list_index + 1) // gidilebilecek liste elemanı varsa
+            {
+                list_index += 2;
+                fill_comments();
+            }
+        }
     }
 }

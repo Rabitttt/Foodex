@@ -18,6 +18,9 @@ namespace FoodEx
             InitializeComponent();
         }
 
+        List<Comment> comments_list = new List<Comment>();
+        private int comment_list_index = 1;
+
         public void first_open()
         {
             Seller seller = new Seller();
@@ -25,7 +28,6 @@ namespace FoodEx
             seller = DbSeller.get_active_user_data();
             fill_user_data(seller);
             fill_dataGridView_by_productsOfSeller();
-            fill_product_detail();
         }
         private void fill_user_data(Seller seller)
         {
@@ -45,18 +47,21 @@ namespace FoodEx
         }
         private void fill_product_detail()
         {
-            txtb_product_name.Text = dataGridView_productsOfSeller.CurrentRow.Cells["name"].Value.ToString();
-            txtb_product_price.Text = dataGridView_productsOfSeller.CurrentRow.Cells["price"].Value.ToString();
-            cmbbox_product_type.Text = dataGridView_productsOfSeller.CurrentRow.Cells["type"].Value.ToString();
-            richTxtb_description.Text = dataGridView_productsOfSeller.CurrentRow.Cells["description"].Value.ToString();
-            lbl_product_createDate.Text = dataGridView_productsOfSeller.CurrentRow.Cells["create_date"].Value.ToString();
-            lbl_product_score.Text = dataGridView_productsOfSeller.CurrentRow.Cells["score"].Value.ToString();
-            pictureBox_product.ImageLocation = dataGridView_productsOfSeller.CurrentRow.Cells["image"].Value.ToString();
+            
+                txtb_product_name.Text = dataGridView_productsOfSeller.CurrentRow.Cells["name"].Value.ToString();
+                txtb_product_price.Text = dataGridView_productsOfSeller.CurrentRow.Cells["price"].Value.ToString();
+                cmbbox_product_type.Text = dataGridView_productsOfSeller.CurrentRow.Cells["type"].Value.ToString();
+                richTxtb_description.Text = dataGridView_productsOfSeller.CurrentRow.Cells["description"].Value.ToString();
+                lbl_product_createDate.Text = dataGridView_productsOfSeller.CurrentRow.Cells["create_date"].Value.ToString();
+                lbl_product_score.Text = dataGridView_productsOfSeller.CurrentRow.Cells["score"].Value.ToString();
+                pictureBox_product.ImageLocation = dataGridView_productsOfSeller.CurrentRow.Cells["image"].Value.ToString();
+            
         }
 
         private void dataGridView_productsOfSeller_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             fill_product_detail();
+            fill_comments();
         }
 
         private void btn_seller_AddNewProduct_Click(object sender, EventArgs e)
@@ -112,8 +117,11 @@ namespace FoodEx
 
         private void btn_product_Update_Click(object sender, EventArgs e)
         {
-            Product product = new Product();
+            
+            try
+            {
 
+            Product product = new Product();
             product.SetId( Convert.ToInt32(dataGridView_productsOfSeller.CurrentRow.Cells["ProductId"].Value));
             product.SetName(txtb_product_name.Text);
             product.SetPrice(Convert.ToInt32(txtb_product_price.Text));
@@ -128,12 +136,21 @@ namespace FoodEx
             }
             fill_dataGridView_by_productsOfSeller();
             fill_product_detail();
+
+            }
+            catch (Exception)// bir şekilde boş dgv ye tıklarsa sorun çıkarmasın
+            {
+            }
         }
 
         private void btn_product_DeleteProduct_Click(object sender, EventArgs e)
         {
+          
+
+            try
+            {
+
             Product product = new Product();
-            
             product.SetId(Convert.ToInt32(dataGridView_productsOfSeller.CurrentRow.Cells["ProductId"].Value));
             
             DialogResult dialog = MessageBox.Show("Delete Selected Product.", "Okey", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -143,6 +160,94 @@ namespace FoodEx
             }
             fill_dataGridView_by_productsOfSeller();
             fill_product_detail();
+            comment_list_index = 1; //index sıfırlanmış oldu
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
+
+        private void fill_comments()
+        {
+            try
+            {
+
+            
+            comments_list = DbComment.comments_of_product(Convert.ToInt32(dataGridView_productsOfSeller.CurrentRow.Cells["ProductId"].Value));
+
+            panel_comment0.Visible = true;
+            panel_comment1.Visible = true;
+
+            try
+            {
+                
+                lbl_comment0_text.Text = comments_list[comment_list_index - 1].GetText();
+                lbl_comment0_createDate.Text = comments_list[comment_list_index - 1].GetCreateTime().ToString();
+                
+                if(comments_list[comment_list_index - 1].GetSeller().GetId() != 0)
+                {
+                    picturebox_comment0_userimage.ImageLocation = comments_list[comment_list_index - 1].GetSeller().GetImage();
+                    lbl_comment0_username.Text = comments_list[comment_list_index - 1].GetSeller().GetName();
+                }
+                else
+                {
+                    picturebox_comment0_userimage.ImageLocation = comments_list[comment_list_index - 1].GetCustomer().GetImage();
+                    lbl_comment0_username.Text = comments_list[comment_list_index - 1].GetCustomer().GetName();
+                }
+            }
+            catch (Exception)
+            {
+                panel_comment0.Visible = false;
+            }
+            try
+            {
+                
+                lbl_comment1_text.Text = comments_list[comment_list_index].GetText();
+                lbl_comment1_createDate.Text = comments_list[comment_list_index].GetCreateTime().ToString();
+
+                if (comments_list[comment_list_index].GetSeller().GetId() != 0)
+                {
+                    picturebox_comment1_userimage.ImageLocation = comments_list[comment_list_index].GetSeller().GetImage();
+                    lbl_comment1_username.Text = comments_list[comment_list_index].GetSeller().GetName();
+                }
+                else
+                {
+                    picturebox_comment1_userimage.ImageLocation = comments_list[comment_list_index].GetCustomer().GetImage();
+                    lbl_comment1_username.Text = comments_list[comment_list_index].GetCustomer().GetName();
+                }
+            }
+            catch (Exception)
+            {
+                panel_comment1.Visible = false;
+            }
+            }
+            catch (Exception) // bir şekilde boş dgv ye tıklarsa sorun çıkarmasın
+            {
+
+
+            }
+        }
+
+        private void btn_slideComments_left_Click(object sender, EventArgs e)
+        {
+            if (comment_list_index > 1) // listenin başına gelindiğinde dursun , index -1 e vs. inmesin
+            {
+                comment_list_index -= 2;
+                fill_comments();
+            }
+        }
+
+        private void btn_slideComments_right_Click(object sender, EventArgs e)
+        {
+            if (comments_list.Count > comment_list_index + 1) // gidilebilecek liste elemanı varsa
+            {
+                comment_list_index += 2;
+                fill_comments();
+            }
+        }
+
+
     }
 }

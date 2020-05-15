@@ -39,34 +39,36 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.panel_comment1 = new System.Windows.Forms.Panel();
+            this.lbl_sellername1 = new System.Windows.Forms.Label();
+            this.rtxtb_comment1 = new System.Windows.Forms.RichTextBox();
+            this.btn_delete1 = new System.Windows.Forms.Button();
+            this.btn_update1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_update = new System.Windows.Forms.Button();
+            this.lbl_product1_name = new System.Windows.Forms.Label();
+            this.picturebox_product1 = new System.Windows.Forms.PictureBox();
+            this.panel_comment0 = new System.Windows.Forms.Panel();
+            this.lbl_sellername0 = new System.Windows.Forms.Label();
+            this.rtxtb_comment0 = new System.Windows.Forms.RichTextBox();
+            this.btn_delete0 = new System.Windows.Forms.Button();
+            this.btn_update0 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lbl_productName = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbl_product0_name = new System.Windows.Forms.Label();
+            this.picturebox_product0 = new System.Windows.Forms.PictureBox();
             this.numericUpdown_money = new System.Windows.Forms.NumericUpDown();
-            this.btn_slide_left = new System.Windows.Forms.Button();
-            this.btn_slide_right = new System.Windows.Forms.Button();
+            this.btn_slideComments_left = new System.Windows.Forms.Button();
+            this.btn_slideComments_right = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_user)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel_comment1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox_product1)).BeginInit();
+            this.panel_comment0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox_product0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdown_money)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,53 +164,63 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel_comment1);
+            this.panel1.Controls.Add(this.panel_comment0);
             this.panel1.Location = new System.Drawing.Point(461, 99);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(549, 434);
             this.panel1.TabIndex = 18;
             // 
-            // panel3
+            // panel_comment1
             // 
-            this.panel3.Controls.Add(this.richTextBox2);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(3, 229);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(539, 202);
-            this.panel3.TabIndex = 0;
+            this.panel_comment1.Controls.Add(this.lbl_sellername1);
+            this.panel_comment1.Controls.Add(this.rtxtb_comment1);
+            this.panel_comment1.Controls.Add(this.btn_delete1);
+            this.panel_comment1.Controls.Add(this.btn_update1);
+            this.panel_comment1.Controls.Add(this.label5);
+            this.panel_comment1.Controls.Add(this.label8);
+            this.panel_comment1.Controls.Add(this.lbl_product1_name);
+            this.panel_comment1.Controls.Add(this.picturebox_product1);
+            this.panel_comment1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_comment1.Location = new System.Drawing.Point(3, 229);
+            this.panel_comment1.Name = "panel_comment1";
+            this.panel_comment1.Size = new System.Drawing.Size(539, 202);
+            this.panel_comment1.TabIndex = 0;
             // 
-            // richTextBox2
+            // lbl_sellername1
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(245, 43);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(284, 96);
-            this.richTextBox2.TabIndex = 6;
-            this.richTextBox2.Text = "";
+            this.lbl_sellername1.AutoSize = true;
+            this.lbl_sellername1.Location = new System.Drawing.Point(113, 58);
+            this.lbl_sellername1.Name = "lbl_sellername1";
+            this.lbl_sellername1.Size = new System.Drawing.Size(45, 16);
+            this.lbl_sellername1.TabIndex = 7;
+            this.lbl_sellername1.Text = "label9";
             // 
-            // button3
+            // rtxtb_comment1
             // 
-            this.button3.Location = new System.Drawing.Point(346, 145);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 45);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.rtxtb_comment1.Location = new System.Drawing.Point(245, 45);
+            this.rtxtb_comment1.Name = "rtxtb_comment1";
+            this.rtxtb_comment1.Size = new System.Drawing.Size(284, 96);
+            this.rtxtb_comment1.TabIndex = 6;
+            this.rtxtb_comment1.Text = "";
             // 
-            // button4
+            // btn_delete1
             // 
-            this.button4.Location = new System.Drawing.Point(245, 145);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 45);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Update ";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_delete1.Location = new System.Drawing.Point(346, 158);
+            this.btn_delete1.Name = "btn_delete1";
+            this.btn_delete1.Size = new System.Drawing.Size(90, 32);
+            this.btn_delete1.TabIndex = 5;
+            this.btn_delete1.Text = "Delete";
+            this.btn_delete1.UseVisualStyleBackColor = true;
+            // 
+            // btn_update1
+            // 
+            this.btn_update1.Location = new System.Drawing.Point(245, 158);
+            this.btn_update1.Name = "btn_update1";
+            this.btn_update1.Size = new System.Drawing.Size(95, 32);
+            this.btn_update1.TabIndex = 5;
+            this.btn_update1.Text = "Update ";
+            this.btn_update1.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -229,62 +241,73 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "Seller Name : ";
             // 
-            // label9
+            // lbl_product1_name
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 16);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "name";
+            this.lbl_product1_name.AutoSize = true;
+            this.lbl_product1_name.Location = new System.Drawing.Point(15, 14);
+            this.lbl_product1_name.Name = "lbl_product1_name";
+            this.lbl_product1_name.Size = new System.Drawing.Size(42, 16);
+            this.lbl_product1_name.TabIndex = 1;
+            this.lbl_product1_name.Text = "name";
             // 
-            // pictureBox3
+            // picturebox_product1
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(3, 79);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(163, 120);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.picturebox_product1.Location = new System.Drawing.Point(3, 79);
+            this.picturebox_product1.Name = "picturebox_product1";
+            this.picturebox_product1.Size = new System.Drawing.Size(163, 120);
+            this.picturebox_product1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturebox_product1.TabIndex = 0;
+            this.picturebox_product1.TabStop = false;
             // 
-            // panel2
+            // panel_comment0
             // 
-            this.panel2.Controls.Add(this.richTextBox1);
-            this.panel2.Controls.Add(this.btn_delete);
-            this.panel2.Controls.Add(this.btn_update);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.lbl_productName);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(539, 208);
-            this.panel2.TabIndex = 0;
+            this.panel_comment0.Controls.Add(this.lbl_sellername0);
+            this.panel_comment0.Controls.Add(this.rtxtb_comment0);
+            this.panel_comment0.Controls.Add(this.btn_delete0);
+            this.panel_comment0.Controls.Add(this.btn_update0);
+            this.panel_comment0.Controls.Add(this.label7);
+            this.panel_comment0.Controls.Add(this.label6);
+            this.panel_comment0.Controls.Add(this.lbl_product0_name);
+            this.panel_comment0.Controls.Add(this.picturebox_product0);
+            this.panel_comment0.Location = new System.Drawing.Point(3, 3);
+            this.panel_comment0.Name = "panel_comment0";
+            this.panel_comment0.Size = new System.Drawing.Size(539, 208);
+            this.panel_comment0.TabIndex = 0;
             // 
-            // richTextBox1
+            // lbl_sellername0
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(245, 43);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(284, 96);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.lbl_sellername0.AutoSize = true;
+            this.lbl_sellername0.Location = new System.Drawing.Point(112, 59);
+            this.lbl_sellername0.Name = "lbl_sellername0";
+            this.lbl_sellername0.Size = new System.Drawing.Size(35, 13);
+            this.lbl_sellername0.TabIndex = 7;
+            this.lbl_sellername0.Text = "label9";
             // 
-            // btn_delete
+            // rtxtb_comment0
             // 
-            this.btn_delete.Location = new System.Drawing.Point(346, 156);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(90, 34);
-            this.btn_delete.TabIndex = 5;
-            this.btn_delete.Text = "Delete";
-            this.btn_delete.UseVisualStyleBackColor = true;
+            this.rtxtb_comment0.Location = new System.Drawing.Point(245, 43);
+            this.rtxtb_comment0.Name = "rtxtb_comment0";
+            this.rtxtb_comment0.Size = new System.Drawing.Size(284, 96);
+            this.rtxtb_comment0.TabIndex = 6;
+            this.rtxtb_comment0.Text = "";
             // 
-            // btn_update
+            // btn_delete0
             // 
-            this.btn_update.Location = new System.Drawing.Point(245, 156);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(95, 34);
-            this.btn_update.TabIndex = 5;
-            this.btn_update.Text = "Update ";
-            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_delete0.Location = new System.Drawing.Point(346, 156);
+            this.btn_delete0.Name = "btn_delete0";
+            this.btn_delete0.Size = new System.Drawing.Size(90, 34);
+            this.btn_delete0.TabIndex = 5;
+            this.btn_delete0.Text = "Delete";
+            this.btn_delete0.UseVisualStyleBackColor = true;
+            // 
+            // btn_update0
+            // 
+            this.btn_update0.Location = new System.Drawing.Point(245, 156);
+            this.btn_update0.Name = "btn_update0";
+            this.btn_update0.Size = new System.Drawing.Size(95, 34);
+            this.btn_update0.TabIndex = 5;
+            this.btn_update0.Text = "Update ";
+            this.btn_update0.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -306,23 +329,24 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Seller Name : ";
             // 
-            // lbl_productName
+            // lbl_product0_name
             // 
-            this.lbl_productName.AutoSize = true;
-            this.lbl_productName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_productName.Location = new System.Drawing.Point(15, 14);
-            this.lbl_productName.Name = "lbl_productName";
-            this.lbl_productName.Size = new System.Drawing.Size(42, 16);
-            this.lbl_productName.TabIndex = 1;
-            this.lbl_productName.Text = "name";
+            this.lbl_product0_name.AutoSize = true;
+            this.lbl_product0_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_product0_name.Location = new System.Drawing.Point(15, 14);
+            this.lbl_product0_name.Name = "lbl_product0_name";
+            this.lbl_product0_name.Size = new System.Drawing.Size(42, 16);
+            this.lbl_product0_name.TabIndex = 1;
+            this.lbl_product0_name.Text = "name";
             // 
-            // pictureBox2
+            // picturebox_product0
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(3, 85);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(163, 120);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.picturebox_product0.Location = new System.Drawing.Point(3, 85);
+            this.picturebox_product0.Name = "picturebox_product0";
+            this.picturebox_product0.Size = new System.Drawing.Size(163, 120);
+            this.picturebox_product0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturebox_product0.TabIndex = 0;
+            this.picturebox_product0.TabStop = false;
             // 
             // numericUpdown_money
             // 
@@ -331,25 +355,27 @@
             this.numericUpdown_money.Size = new System.Drawing.Size(124, 20);
             this.numericUpdown_money.TabIndex = 19;
             // 
-            // btn_slide_left
+            // btn_slideComments_left
             // 
-            this.btn_slide_left.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_slide_left.Location = new System.Drawing.Point(781, 33);
-            this.btn_slide_left.Name = "btn_slide_left";
-            this.btn_slide_left.Size = new System.Drawing.Size(75, 54);
-            this.btn_slide_left.TabIndex = 21;
-            this.btn_slide_left.Text = "<";
-            this.btn_slide_left.UseVisualStyleBackColor = true;
+            this.btn_slideComments_left.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_slideComments_left.Location = new System.Drawing.Point(781, 33);
+            this.btn_slideComments_left.Name = "btn_slideComments_left";
+            this.btn_slideComments_left.Size = new System.Drawing.Size(75, 54);
+            this.btn_slideComments_left.TabIndex = 21;
+            this.btn_slideComments_left.Text = "<";
+            this.btn_slideComments_left.UseVisualStyleBackColor = true;
+            this.btn_slideComments_left.Click += new System.EventHandler(this.btn_slideComments_left_Click);
             // 
-            // btn_slide_right
+            // btn_slideComments_right
             // 
-            this.btn_slide_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_slide_right.Location = new System.Drawing.Point(879, 33);
-            this.btn_slide_right.Name = "btn_slide_right";
-            this.btn_slide_right.Size = new System.Drawing.Size(67, 54);
-            this.btn_slide_right.TabIndex = 22;
-            this.btn_slide_right.Text = ">";
-            this.btn_slide_right.UseVisualStyleBackColor = true;
+            this.btn_slideComments_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_slideComments_right.Location = new System.Drawing.Point(879, 33);
+            this.btn_slideComments_right.Name = "btn_slideComments_right";
+            this.btn_slideComments_right.Size = new System.Drawing.Size(67, 54);
+            this.btn_slideComments_right.TabIndex = 22;
+            this.btn_slideComments_right.Text = ">";
+            this.btn_slideComments_right.UseVisualStyleBackColor = true;
+            this.btn_slideComments_right.Click += new System.EventHandler(this.btn_slideComments_right_Click);
             // 
             // label10
             // 
@@ -378,8 +404,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.btn_slide_right);
-            this.Controls.Add(this.btn_slide_left);
+            this.Controls.Add(this.btn_slideComments_right);
+            this.Controls.Add(this.btn_slideComments_left);
             this.Controls.Add(this.numericUpdown_money);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.maskedtxtb_telephone);
@@ -395,12 +421,12 @@
             this.Size = new System.Drawing.Size(1017, 542);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_user)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel_comment1.ResumeLayout(false);
+            this.panel_comment1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox_product1)).EndInit();
+            this.panel_comment0.ResumeLayout(false);
+            this.panel_comment0.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox_product0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdown_money)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -419,27 +445,29 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lbl_productName;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel_comment0;
+        private System.Windows.Forms.Label lbl_product0_name;
+        private System.Windows.Forms.PictureBox picturebox_product0;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpdown_money;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel_comment1;
+        private System.Windows.Forms.RichTextBox rtxtb_comment1;
+        private System.Windows.Forms.Button btn_delete1;
+        private System.Windows.Forms.Button btn_update1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_update;
-        private System.Windows.Forms.Button btn_slide_left;
-        private System.Windows.Forms.Button btn_slide_right;
+        private System.Windows.Forms.Label lbl_product1_name;
+        private System.Windows.Forms.PictureBox picturebox_product1;
+        private System.Windows.Forms.RichTextBox rtxtb_comment0;
+        private System.Windows.Forms.Button btn_delete0;
+        private System.Windows.Forms.Button btn_update0;
+        private System.Windows.Forms.Button btn_slideComments_left;
+        private System.Windows.Forms.Button btn_slideComments_right;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lbl_sellername1;
+        private System.Windows.Forms.Label lbl_sellername0;
     }
 }

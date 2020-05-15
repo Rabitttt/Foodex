@@ -17,7 +17,10 @@ namespace FoodEx
         {
             InitializeComponent();
         }
-        
+
+        List<Comment> comments_list = new List<Comment>();
+        private int list_index = 1;
+
         public void firts_open()
         {
             fill_user_details();
@@ -38,7 +41,36 @@ namespace FoodEx
 
         private void fill_comments()
         {
+            comments_list = DbComment.get_comments_of_active_user();
 
+            try
+            {
+                lbl_product0_name.Text = comments_list[list_index - 1].GetProduct().GetName();
+                lbl_sellername0.Text = comments_list[list_index - 1].GetProduct().GetOwner().GetName();
+                rtxtb_comment0.Text = comments_list[list_index - 1].GetText();
+                picturebox_product0.ImageLocation = comments_list[list_index - 1].GetProduct().GetImage();
+            }
+            catch (Exception)
+            {
+                lbl_product0_name.Text = "";
+                lbl_sellername0.Text = "";
+                rtxtb_comment0.Text = "";
+                picturebox_product0.ImageLocation = "";
+            }
+            try
+            {
+                lbl_product1_name.Text = comments_list[list_index].GetProduct().GetName();
+                lbl_sellername1.Text = comments_list[list_index].GetProduct().GetOwner().GetName();
+                rtxtb_comment1.Text = comments_list[list_index].GetText();
+                picturebox_product1.ImageLocation = comments_list[list_index].GetProduct().GetImage();
+            }
+            catch (Exception)
+            {
+                lbl_product1_name.Text = "";
+                lbl_sellername1.Text = "";
+                rtxtb_comment1.Text = "";
+                picturebox_product1.ImageLocation = "";
+            }
         }
 
         private void btn_user_update_Click(object sender, EventArgs e)
@@ -84,6 +116,24 @@ namespace FoodEx
                 Application.Restart(); //Hesap silindi giriş sayfasına dön
             }
 
+        }
+
+        private void btn_slideComments_left_Click(object sender, EventArgs e)
+        {
+            if (list_index > 1) // listenin başına gelindiğinde dursun , index -1 e vs. inmesin
+            {
+                list_index -= 2;
+                fill_comments();
+            }
+        }
+
+        private void btn_slideComments_right_Click(object sender, EventArgs e)
+        {
+            if (comments_list.Count > list_index +1) // gidilebilecek liste elemanı varsa
+            {
+                list_index += 2;
+                fill_comments();
+            }
         }
     }
 }
