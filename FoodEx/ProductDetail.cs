@@ -159,8 +159,8 @@ namespace FoodEx
             if(!string.IsNullOrEmpty(lbl_id.Text))
             {
                 score = Convert.ToInt32(numericUpDown_score.Value);
-                product.SetScore( DbProduct.get_product_from_id(Convert.ToInt32(lbl_id.Text)).GetScore() + score );
-
+                score = (DbProduct.get_product_from_id(Convert.ToInt32(lbl_id.Text)).GetScore() + score) / 2;
+                product.SetScore(score);
 
                 DbProduct.UpdateProductScore(product);
             }

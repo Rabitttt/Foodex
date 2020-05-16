@@ -102,10 +102,10 @@ namespace FoodEx
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-             string clock = DateTime.Now.ToLongTimeString();
-             lbl_clock.Text = clock;
-             
-            if(Customer.activeCustomer != 0)
+            string clock = DateTime.Now.ToLongTimeString();
+            lbl_clock.Text = clock;
+
+            if (Customer.activeCustomer != 0)
             {
                 lbl_active_usermoney.Text = DbCustomer.get_customer_from_id(Customer.activeCustomer).GetMoney().ToString(); //menudeki para değiştiğinde güncelleyebilmek için
             }
@@ -134,5 +134,6 @@ namespace FoodEx
             }
         }
 
+        
     }
 }

@@ -43,7 +43,7 @@ namespace FoodEx
             this.pictureBox_drinks = new System.Windows.Forms.PictureBox();
             this.btn_slideRight = new System.Windows.Forms.Button();
             this.btn_slideLeft = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel0 = new System.Windows.Forms.Panel();
             this.lbl_product0_id = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_product0_sellername = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@ namespace FoodEx
             this.picturbox_product0 = new System.Windows.Forms.PictureBox();
             this.btn_product0_detail = new System.Windows.Forms.Button();
             this.btn_product0_buy = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_product2_id = new System.Windows.Forms.Label();
             this.lbl_product2_sellername = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@ namespace FoodEx
             this.picturbox_product2 = new System.Windows.Forms.PictureBox();
             this.btn_product2_detail = new System.Windows.Forms.Button();
             this.btn_product2_buy = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_product1_id = new System.Windows.Forms.Label();
             this.lbl_product1_sellername = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -85,13 +85,13 @@ namespace FoodEx
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_desserts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mainfood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_drinks)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panel0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturbox_product0)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturbox_product2)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturbox_product1)).BeginInit();
             this.SuspendLayout();
@@ -219,24 +219,24 @@ namespace FoodEx
             this.btn_slideLeft.UseVisualStyleBackColor = false;
             this.btn_slideLeft.Click += new System.EventHandler(this.btn_slideLeft_Click);
             // 
-            // panel1
+            // panel0
             // 
-            this.panel1.Controls.Add(this.lbl_product0_id);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lbl_product0_sellername);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lbl_product0_score);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lbl_product0_name);
-            this.panel1.Controls.Add(this.lbl_product0_price);
-            this.panel1.Controls.Add(this.picturbox_product0);
-            this.panel1.Controls.Add(this.btn_product0_detail);
-            this.panel1.Controls.Add(this.btn_product0_buy);
-            this.panel1.Location = new System.Drawing.Point(65, 218);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(327, 407);
-            this.panel1.TabIndex = 43;
+            this.panel0.Controls.Add(this.lbl_product0_id);
+            this.panel0.Controls.Add(this.label1);
+            this.panel0.Controls.Add(this.lbl_product0_sellername);
+            this.panel0.Controls.Add(this.label2);
+            this.panel0.Controls.Add(this.lbl_product0_score);
+            this.panel0.Controls.Add(this.label9);
+            this.panel0.Controls.Add(this.pictureBox1);
+            this.panel0.Controls.Add(this.lbl_product0_name);
+            this.panel0.Controls.Add(this.lbl_product0_price);
+            this.panel0.Controls.Add(this.picturbox_product0);
+            this.panel0.Controls.Add(this.btn_product0_detail);
+            this.panel0.Controls.Add(this.btn_product0_buy);
+            this.panel0.Location = new System.Drawing.Point(65, 218);
+            this.panel0.Name = "panel0";
+            this.panel0.Size = new System.Drawing.Size(327, 407);
+            this.panel0.TabIndex = 43;
             // 
             // lbl_product0_id
             // 
@@ -355,24 +355,24 @@ namespace FoodEx
             this.btn_product0_buy.UseVisualStyleBackColor = true;
             this.btn_product0_buy.Click += new System.EventHandler(this.btn_product0_buy_Click);
             // 
-            // panel3
+            // panel2
             // 
-            this.panel3.Controls.Add(this.lbl_product2_id);
-            this.panel3.Controls.Add(this.lbl_product2_sellername);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.lbl_product2_score);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Controls.Add(this.lbl_product2_name);
-            this.panel3.Controls.Add(this.lbl_product2_price);
-            this.panel3.Controls.Add(this.picturbox_product2);
-            this.panel3.Controls.Add(this.btn_product2_detail);
-            this.panel3.Controls.Add(this.btn_product2_buy);
-            this.panel3.Location = new System.Drawing.Point(731, 218);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(327, 407);
-            this.panel3.TabIndex = 44;
+            this.panel2.Controls.Add(this.lbl_product2_id);
+            this.panel2.Controls.Add(this.lbl_product2_sellername);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.lbl_product2_score);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.lbl_product2_name);
+            this.panel2.Controls.Add(this.lbl_product2_price);
+            this.panel2.Controls.Add(this.picturbox_product2);
+            this.panel2.Controls.Add(this.btn_product2_detail);
+            this.panel2.Controls.Add(this.btn_product2_buy);
+            this.panel2.Location = new System.Drawing.Point(731, 218);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(327, 407);
+            this.panel2.TabIndex = 44;
             // 
             // lbl_product2_id
             // 
@@ -490,24 +490,24 @@ namespace FoodEx
             this.btn_product2_buy.UseVisualStyleBackColor = true;
             this.btn_product2_buy.Click += new System.EventHandler(this.btn_product2_buy_Click);
             // 
-            // panel2
+            // panel1
             // 
-            this.panel2.Controls.Add(this.lbl_product1_id);
-            this.panel2.Controls.Add(this.lbl_product1_sellername);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.lbl_product1_score);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.lbl_product1_name);
-            this.panel2.Controls.Add(this.lbl_product1_price);
-            this.panel2.Controls.Add(this.picturbox_product1);
-            this.panel2.Controls.Add(this.btn_product1_detail);
-            this.panel2.Controls.Add(this.btn_product1_buy);
-            this.panel2.Location = new System.Drawing.Point(398, 218);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(327, 407);
-            this.panel2.TabIndex = 45;
+            this.panel1.Controls.Add(this.lbl_product1_id);
+            this.panel1.Controls.Add(this.lbl_product1_sellername);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lbl_product1_score);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.lbl_product1_name);
+            this.panel1.Controls.Add(this.lbl_product1_price);
+            this.panel1.Controls.Add(this.picturbox_product1);
+            this.panel1.Controls.Add(this.btn_product1_detail);
+            this.panel1.Controls.Add(this.btn_product1_buy);
+            this.panel1.Location = new System.Drawing.Point(398, 218);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(327, 407);
+            this.panel1.TabIndex = 45;
             // 
             // lbl_product1_id
             // 
@@ -641,24 +641,24 @@ namespace FoodEx
             this.Controls.Add(this.pictureBox_drinks);
             this.Controls.Add(this.btn_slideRight);
             this.Controls.Add(this.btn_slideLeft);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel0);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "Foods";
             this.Size = new System.Drawing.Size(1213, 708);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_desserts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mainfood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_drinks)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel0.ResumeLayout(false);
+            this.panel0.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturbox_product0)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturbox_product2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturbox_product2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturbox_product1)).EndInit();
             this.ResumeLayout(false);
@@ -680,7 +680,7 @@ namespace FoodEx
         private System.Windows.Forms.PictureBox pictureBox_drinks;
         private System.Windows.Forms.Button btn_slideRight;
         private System.Windows.Forms.Button btn_slideLeft;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel0;
         private System.Windows.Forms.Label lbl_product0_sellername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_product0_score;
@@ -691,7 +691,7 @@ namespace FoodEx
         private System.Windows.Forms.PictureBox picturbox_product0;
         private System.Windows.Forms.Button btn_product0_detail;
         private System.Windows.Forms.Button btn_product0_buy;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbl_product2_sellername;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lbl_product2_score;
@@ -702,7 +702,7 @@ namespace FoodEx
         private System.Windows.Forms.PictureBox picturbox_product2;
         private System.Windows.Forms.Button btn_product2_detail;
         private System.Windows.Forms.Button btn_product2_buy;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_product1_sellername;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl_product1_score;

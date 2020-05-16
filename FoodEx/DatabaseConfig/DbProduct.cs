@@ -95,140 +95,8 @@ namespace FoodEx.DatabaseConfig
             }
         }
 
-        //public static List<Product> db_fill_FoodList()
-        //{
-        //    using (SQLiteConnection connection_sqlite = new SQLiteConnection(sqlitedb_connstr))
-        //    {
-        //        string sql_string = $"SELECT * FROM Product WHERE type = 'Main Menu' "; //default
 
-        //        MessageBox.Show(sql_string);
-
-        //        Product product = new Product();
-        //        Seller seller = new Seller();
-        //        List<Product> food_list = new List<Product>();
-        //        using (SQLiteCommand command_sqlite = new SQLiteCommand(sql_string, connection_sqlite))
-        //        {
-        //            try
-        //            {
-
-        //                command_sqlite.Connection.Open();
-        //                SQLiteDataReader dataReader = command_sqlite.ExecuteReader();
-        //                while (dataReader.Read())
-        //                {
-        //                    product.SetId(Convert.ToInt32(dataReader["id"]));
-        //                    product.SetName(dataReader["name"].ToString());
-        //                    product.SetPrice(Convert.ToDouble(dataReader["price"]));
-        //                    product.SetType(dataReader["type"].ToString());
-        //                    product.SetDescription(dataReader["description"].ToString());
-        //                    product.SetImage(dataReader["image"].ToString());
-        //                    product.SetCreate_date(Convert.ToDateTime(dataReader["create_date"]));
-        //                    product.SetScore(Convert.ToInt16(dataReader["score"]));
-
-        //                    seller.SetId(Convert.ToInt32(dataReader["owner"]));
-        //                    product.SetOwner(DbSeller.get_seller_data_from_id(seller.GetId())); //Product.owner nesne tutuyor fakat Veri tabanından int id şeklinde aldıgımız için çektiğimiz id nin nesnesini alıyoruz
-
-        //                    food_list.Add(product);
-        //                    //stack.Push(product); //Database'den çektiğimiz ürünü ana ekranda gösterebilmek için stacke ya ekledik
-        //                }
-        //            }
-        //            catch (SQLiteException exception)
-        //            {
-        //                MessageBox.Show(exception.Message);
-        //            }
-        //            return food_list;
-        //        }
-        //    }
-        //}
-        //public static List<Product> db_fill_FoodList_drinks()
-        //{
-        //    using (SQLiteConnection connection_sqlite = new SQLiteConnection(sqlitedb_connstr))
-        //    {
-        //        string sql_string = $"SELECT * FROM Product WHERE type = 'Drinks' ";
-
-        //        MessageBox.Show(sql_string);
-
-        //        Product product = new Product();
-        //        Seller seller = new Seller();
-        //        List<Product> food_list = new List<Product>();
-        //        using (SQLiteCommand command_sqlite = new SQLiteCommand(sql_string, connection_sqlite))
-        //        {
-        //            try
-        //            {
-
-        //                command_sqlite.Connection.Open();
-        //                SQLiteDataReader dataReader = command_sqlite.ExecuteReader();
-        //                while (dataReader.Read())
-        //                {
-        //                    product.SetId(Convert.ToInt32(dataReader["id"]));
-        //                    product.SetName(dataReader["name"].ToString());
-        //                    product.SetPrice(Convert.ToDouble(dataReader["price"]));
-        //                    product.SetType(dataReader["type"].ToString());
-        //                    product.SetDescription(dataReader["description"].ToString());
-        //                    product.SetImage(dataReader["image"].ToString());
-        //                    product.SetCreate_date(Convert.ToDateTime(dataReader["create_date"]));
-        //                    product.SetScore(Convert.ToInt16(dataReader["score"]));
-
-        //                    seller.SetId(Convert.ToInt32(dataReader["owner"]));
-        //                    product.SetOwner(DbSeller.get_seller_data_from_id(seller.GetId())); //Product.owner nesne tutuyor fakat Veri tabanından int id şeklinde aldıgımız için çektiğimiz id nin nesnesini alıyoruz
-
-        //                    food_list.Add(product);
-        //                    //stack.Push(product); //Database'den çektiğimiz ürünü ana ekranda gösterebilmek için stacke ya ekledik
-        //                }
-        //            }
-        //            catch (SQLiteException exception)
-        //            {
-        //                MessageBox.Show(exception.Message);
-        //            }
-        //            return food_list;
-        //        }
-        //    }
-        //}
-        //public static List<Product> db_fill_FoodList_desserts()
-        //{
-        //    using (SQLiteConnection connection_sqlite = new SQLiteConnection(sqlitedb_connstr))
-        //    {
-        //        string sql_string = $"SELECT * FROM Product WHERE type = 'Desserts' ";
-
-        //        MessageBox.Show(sql_string);
-
-        //        Product product = new Product();
-        //        Seller seller = new Seller();
-        //        List<Product> food_list = new List<Product>();
-        //        using (SQLiteCommand command_sqlite = new SQLiteCommand(sql_string, connection_sqlite))
-        //        {
-        //            try
-        //            {
-
-        //                command_sqlite.Connection.Open();
-        //                SQLiteDataReader dataReader = command_sqlite.ExecuteReader();
-        //                while (dataReader.Read())
-        //                {
-        //                    product.SetId(Convert.ToInt32(dataReader["id"]));
-        //                    product.SetName(dataReader["name"].ToString());
-        //                    product.SetPrice(Convert.ToDouble(dataReader["price"]));
-        //                    product.SetType(dataReader["type"].ToString());
-        //                    product.SetDescription(dataReader["description"].ToString());
-        //                    product.SetImage(dataReader["image"].ToString());
-        //                    product.SetCreate_date(Convert.ToDateTime(dataReader["create_date"]));
-        //                    product.SetScore(Convert.ToInt16(dataReader["score"]));
-
-        //                    seller.SetId(Convert.ToInt32(dataReader["owner"]));
-        //                    product.SetOwner(DbSeller.get_seller_data_from_id(seller.GetId())); //Product.owner nesne tutuyor fakat Veri tabanından int id şeklinde aldıgımız için çektiğimiz id nin nesnesini alıyoruz
-
-        //                    food_list.Add(product);
-        //                    //stack.Push(product); //Database'den çektiğimiz ürünü ana ekranda gösterebilmek için stacke ya ekledik
-        //                }
-        //            }
-        //            catch (SQLiteException exception)
-        //            {
-        //                MessageBox.Show(exception.Message);
-        //            }
-        //            return food_list;
-        //        }
-        //    }
-        //}
-
-        public static Stack<Product> db_fill_FoodList(string type)
+        public static List<Product> db_fill_FoodList(string type)
         {
             using (SQLiteConnection connection_sqlite = new SQLiteConnection(sqlitedb_connstr))
             {
@@ -246,8 +114,8 @@ namespace FoodEx.DatabaseConfig
                     sql_string = $"SELECT * FROM Product WHERE type = 'Desserts' ";
                 }
 
-                Seller seller = new Seller();
-                Stack<Product> food_list = new Stack<Product>();
+                
+                List<Product> food_list = new List<Product>();
                 using (SQLiteCommand command_sqlite = new SQLiteCommand(sql_string, connection_sqlite))
                 {
                     try
@@ -258,7 +126,8 @@ namespace FoodEx.DatabaseConfig
                         { 
                         while (dataReader.Read())
                         {
-                            Product product = new Product();
+                                Seller seller = new Seller();
+                                Product product = new Product();
                             product.SetId(Convert.ToInt32(dataReader["id"]));
                             product.SetName(dataReader["name"].ToString());
                             product.SetPrice(Convert.ToDouble(dataReader["price"]));
@@ -271,8 +140,7 @@ namespace FoodEx.DatabaseConfig
                             seller.SetId(Convert.ToInt32(dataReader["owner"]));
                             product.SetOwner(DbSeller.get_seller_data_from_id(seller.GetId())); //Product.owner nesne tutuyor fakat Veri tabanından int id şeklinde aldıgımız için çektiğimiz id nin nesnesini alıyoruz
 
-                            food_list.Push(product);
-                            //stack.Push(product); //Database'den çektiğimiz ürünü ana ekranda gösterebilmek için stacke ya ekledik
+                            food_list.Add(product);
                         }
                         }
                         return food_list;
