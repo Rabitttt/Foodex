@@ -128,5 +128,47 @@ namespace FoodEx
                 fill_comments();
             }
         }
+
+        private void btn_buy_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show($"Buy product.", "Okey", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
+            {
+                Customer customer = new Customer();
+                customer = DbCustomer.get_customer_from_id(Customer.activeCustomer);
+                double userMoney = customer.GetMoney();
+                double product_price;
+
+                product_price = Convert.ToInt32(lbl_price.Text);
+
+                if (userMoney >= product_price)
+                {
+                    userMoney = userMoney - product_price;
+                    customer.SetMoney(userMoney);
+                    DbCustomer.UpdateCustomer(customer);
+                }
+            }
+        }
+
+        private void btn_GivePoint_Click(object sender, EventArgs e)
+        {
+            Product product = new Product();
+            product = DbProduct.get_product_from_id(Convert.ToInt32(lbl_id.Text));
+            int score;
+
+            if(!string.IsNullOrEmpty(lbl_id.Text))
+            {
+                score = Convert.ToInt32(numericUpDown_score.Value);
+                product.SetScore( DbProduct.get_product_from_id(Convert.ToInt32(lbl_id.Text)).GetScore() + score );
+
+
+                DbProduct.UpdateProductScore(product);
+            }
+            else
+            {
+                MessageBox.Show("Score is not valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+        }
     }
 }

@@ -277,7 +277,12 @@
             // 
             // cmbbox_product_type
             // 
+            this.cmbbox_product_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbox_product_type.FormattingEnabled = true;
+            this.cmbbox_product_type.Items.AddRange(new object[] {
+            "Drinks",
+            "Main Menu",
+            "Desserts"});
             this.cmbbox_product_type.Location = new System.Drawing.Point(256, 85);
             this.cmbbox_product_type.Name = "cmbbox_product_type";
             this.cmbbox_product_type.Size = new System.Drawing.Size(104, 21);

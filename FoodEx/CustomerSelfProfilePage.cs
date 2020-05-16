@@ -55,7 +55,7 @@ namespace FoodEx
                 lbl_product0_name.Text = "";
                 lbl_sellername0.Text = "";
                 rtxtb_comment0.Text = "";
-                picturebox_product0.ImageLocation = "";
+                picturebox_product0.ImageLocation = "C:\\Users\\Selman\\Desktop\\images\\addPicture.png";
             }
             try
             {
@@ -69,7 +69,7 @@ namespace FoodEx
                 lbl_product1_name.Text = "";
                 lbl_sellername1.Text = "";
                 rtxtb_comment1.Text = "";
-                picturebox_product1.ImageLocation = "";
+                picturebox_product1.ImageLocation = "C:\\Users\\Selman\\Desktop\\images\\addPicture.png";
             }
         }
 

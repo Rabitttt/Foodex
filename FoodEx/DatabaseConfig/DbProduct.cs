@@ -327,5 +327,26 @@ namespace FoodEx.DatabaseConfig
                 }
             }
         }
+        public static void UpdateProductScore(Product product)
+        {
+            using (SQLiteConnection connection_sqlite = new SQLiteConnection(sqlitedb_connstr))
+            {
+                string sql_string = $"UPDATE Product SET score = '{product.GetScore()}' WHERE id = '{product.GetId()}' ";
+
+                using (SQLiteCommand command_sqlite = new SQLiteCommand(sql_string, connection_sqlite))
+                {
+                    try
+                    {
+                        command_sqlite.Connection.Open();
+                        command_sqlite.ExecuteNonQuery();
+                        MessageBox.Show("Updated!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (SQLiteException exception)
+                    {
+                        MessageBox.Show(exception.Message);
+                    }
+                }
+            }
+        }
     }
 }

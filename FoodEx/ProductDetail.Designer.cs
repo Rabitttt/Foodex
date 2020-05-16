@@ -53,7 +53,6 @@
             this.btn_addComment = new System.Windows.Forms.Button();
             this.richTxtb_commentText = new System.Windows.Forms.RichTextBox();
             this.btn_GivePoint = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbl_givePoint = new System.Windows.Forms.Label();
             this.lbl_description = new System.Windows.Forms.Label();
             this.lbl_id = new System.Windows.Forms.Label();
@@ -63,11 +62,13 @@
             this.lbl_score = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
+            this.numericUpDown_score = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_product)).BeginInit();
             this.flowLayoutPanel_comments.SuspendLayout();
             this.panel_comment1.SuspendLayout();
             this.panel_comment2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_score)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_product_createDate
@@ -112,7 +113,7 @@
             // 
             this.lbl_n.AutoSize = true;
             this.lbl_n.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_n.Location = new System.Drawing.Point(23, 215);
+            this.lbl_n.Location = new System.Drawing.Point(23, 221);
             this.lbl_n.Name = "lbl_n";
             this.lbl_n.Size = new System.Drawing.Size(54, 16);
             this.lbl_n.TabIndex = 11;
@@ -132,7 +133,7 @@
             // 
             this.lbl_t.AutoSize = true;
             this.lbl_t.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_t.Location = new System.Drawing.Point(23, 246);
+            this.lbl_t.Location = new System.Drawing.Point(23, 252);
             this.lbl_t.Name = "lbl_t";
             this.lbl_t.Size = new System.Drawing.Size(49, 16);
             this.lbl_t.TabIndex = 13;
@@ -142,7 +143,7 @@
             // 
             this.lbl_cd.AutoSize = true;
             this.lbl_cd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cd.Location = new System.Drawing.Point(23, 281);
+            this.lbl_cd.Location = new System.Drawing.Point(23, 287);
             this.lbl_cd.Name = "lbl_cd";
             this.lbl_cd.Size = new System.Drawing.Size(89, 16);
             this.lbl_cd.TabIndex = 14;
@@ -152,7 +153,7 @@
             // 
             this.lbl_s.AutoSize = true;
             this.lbl_s.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_s.Location = new System.Drawing.Point(194, 315);
+            this.lbl_s.Location = new System.Drawing.Point(196, 329);
             this.lbl_s.Name = "lbl_s";
             this.lbl_s.Size = new System.Drawing.Size(53, 16);
             this.lbl_s.TabIndex = 15;
@@ -166,6 +167,7 @@
             this.btn_buy.TabIndex = 23;
             this.btn_buy.Text = "Buy";
             this.btn_buy.UseVisualStyleBackColor = true;
+            this.btn_buy.Click += new System.EventHandler(this.btn_buy_Click);
             // 
             // btn_slideComments_right
             // 
@@ -296,24 +298,18 @@
             // 
             // btn_GivePoint
             // 
-            this.btn_GivePoint.Location = new System.Drawing.Point(197, 392);
+            this.btn_GivePoint.Location = new System.Drawing.Point(197, 389);
             this.btn_GivePoint.Name = "btn_GivePoint";
-            this.btn_GivePoint.Size = new System.Drawing.Size(132, 42);
+            this.btn_GivePoint.Size = new System.Drawing.Size(161, 49);
             this.btn_GivePoint.TabIndex = 23;
             this.btn_GivePoint.Text = "Give Point";
             this.btn_GivePoint.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(197, 366);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 34;
+            this.btn_GivePoint.Click += new System.EventHandler(this.btn_GivePoint_Click);
             // 
             // lbl_givePoint
             // 
             this.lbl_givePoint.AutoSize = true;
-            this.lbl_givePoint.Location = new System.Drawing.Point(194, 350);
+            this.lbl_givePoint.Location = new System.Drawing.Point(196, 365);
             this.lbl_givePoint.Name = "lbl_givePoint";
             this.lbl_givePoint.Size = new System.Drawing.Size(106, 13);
             this.lbl_givePoint.TabIndex = 35;
@@ -332,7 +328,7 @@
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(50, 191);
+            this.lbl_id.Location = new System.Drawing.Point(50, 197);
             this.lbl_id.Name = "lbl_id";
             this.lbl_id.Size = new System.Drawing.Size(35, 13);
             this.lbl_id.TabIndex = 37;
@@ -341,7 +337,7 @@
             // lbl_type
             // 
             this.lbl_type.AutoSize = true;
-            this.lbl_type.Location = new System.Drawing.Point(78, 249);
+            this.lbl_type.Location = new System.Drawing.Point(78, 255);
             this.lbl_type.Name = "lbl_type";
             this.lbl_type.Size = new System.Drawing.Size(35, 13);
             this.lbl_type.TabIndex = 37;
@@ -350,7 +346,7 @@
             // lbl_createDate
             // 
             this.lbl_createDate.AutoSize = true;
-            this.lbl_createDate.Location = new System.Drawing.Point(118, 284);
+            this.lbl_createDate.Location = new System.Drawing.Point(118, 290);
             this.lbl_createDate.Name = "lbl_createDate";
             this.lbl_createDate.Size = new System.Drawing.Size(35, 13);
             this.lbl_createDate.TabIndex = 37;
@@ -368,7 +364,7 @@
             // lbl_score
             // 
             this.lbl_score.AutoSize = true;
-            this.lbl_score.Location = new System.Drawing.Point(253, 318);
+            this.lbl_score.Location = new System.Drawing.Point(255, 332);
             this.lbl_score.Name = "lbl_score";
             this.lbl_score.Size = new System.Drawing.Size(35, 13);
             this.lbl_score.TabIndex = 37;
@@ -377,7 +373,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 191);
+            this.label1.Location = new System.Drawing.Point(23, 197);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
@@ -387,17 +383,30 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Location = new System.Drawing.Point(70, 215);
+            this.lbl_name.Location = new System.Drawing.Point(70, 221);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(35, 13);
             this.lbl_name.TabIndex = 37;
             this.lbl_name.Text = "label2";
+            // 
+            // numericUpDown_score
+            // 
+            this.numericUpDown_score.Location = new System.Drawing.Point(308, 363);
+            this.numericUpDown_score.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown_score.Name = "numericUpDown_score";
+            this.numericUpDown_score.Size = new System.Drawing.Size(50, 20);
+            this.numericUpDown_score.TabIndex = 39;
             // 
             // ProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 552);
+            this.Controls.Add(this.numericUpDown_score);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_score);
             this.Controls.Add(this.lbl_price);
@@ -407,7 +416,6 @@
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.lbl_description);
             this.Controls.Add(this.lbl_givePoint);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_slideComments_right);
             this.Controls.Add(this.btn_slideComments_left);
             this.Controls.Add(this.label14);
@@ -434,6 +442,7 @@
             this.panel_comment2.ResumeLayout(false);
             this.panel_comment2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_score)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,7 +471,6 @@
         private System.Windows.Forms.Label lbl_comment1_text;
         private System.Windows.Forms.Label lbl_comment1_username;
         private System.Windows.Forms.Button btn_GivePoint;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lbl_givePoint;
         private System.Windows.Forms.Label lbl_description;
         private System.Windows.Forms.Label lbl_id;
@@ -475,5 +483,6 @@
         private System.Windows.Forms.RichTextBox richTxtb_commentText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.NumericUpDown numericUpDown_score;
     }
 }
