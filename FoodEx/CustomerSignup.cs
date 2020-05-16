@@ -16,7 +16,6 @@ namespace FoodEx
         public CustomerSignup()
         {
             InitializeComponent();
-            pictureBox_cs.ImageLocation = "C:\\Users\\Selman\\Desktop\\images\\addPicture.png";
         }
 
         private void btn_cs_signin_Click(object sender, EventArgs e)

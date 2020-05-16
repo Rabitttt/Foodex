@@ -248,6 +248,16 @@ namespace FoodEx
             }
         }
 
+        private void pictureBox_seller_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            pictureBox_seller.ImageLocation = openFileDialog1.FileName;
+        }
 
+        private void pictureBox_product_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            pictureBox_product.ImageLocation = openFileDialog1.FileName;
+        }
     }
 }

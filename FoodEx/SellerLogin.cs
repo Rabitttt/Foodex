@@ -22,8 +22,10 @@ namespace FoodEx
             Seller seller = new Seller();
             seller.SetName(txtb_sl_username.Text);
             seller.SetPassword(txtb_sl_password.Text);
-            DbSeller.is_account_exist(seller);
-            OpenPage.ActiveForm.Close();
+            if(DbSeller.is_account_exist(seller)) // hesap varsa
+            {
+                OpenPage.ActiveForm.Close();
+            }
         }
 
         private void lbl_showPasswordText_MouseMove(object sender, MouseEventArgs e)

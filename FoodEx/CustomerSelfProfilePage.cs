@@ -45,6 +45,7 @@ namespace FoodEx
 
             try
             {
+                panel_comment0.Visible = true;
                 lbl_product0_name.Text = comments_list[list_index - 1].GetProduct().GetName();
                 lbl_sellername0.Text = comments_list[list_index - 1].GetProduct().GetOwner().GetName();
                 rtxtb_comment0.Text = comments_list[list_index - 1].GetText();
@@ -52,13 +53,11 @@ namespace FoodEx
             }
             catch (Exception)
             {
-                lbl_product0_name.Text = "";
-                lbl_sellername0.Text = "";
-                rtxtb_comment0.Text = "";
-                picturebox_product0.ImageLocation = "C:\\Users\\Selman\\Desktop\\images\\addPicture.png";
+                panel_comment0.Visible = false;
             }
             try
             {
+                panel_comment1.Visible = true;
                 lbl_product1_name.Text = comments_list[list_index].GetProduct().GetName();
                 lbl_sellername1.Text = comments_list[list_index].GetProduct().GetOwner().GetName();
                 rtxtb_comment1.Text = comments_list[list_index].GetText();
@@ -69,7 +68,8 @@ namespace FoodEx
                 lbl_product1_name.Text = "";
                 lbl_sellername1.Text = "";
                 rtxtb_comment1.Text = "";
-                picturebox_product1.ImageLocation = "C:\\Users\\Selman\\Desktop\\images\\addPicture.png";
+
+                panel_comment1.Visible = false;
             }
         }
 

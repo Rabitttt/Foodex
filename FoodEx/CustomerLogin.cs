@@ -23,8 +23,10 @@ namespace FoodEx
             Customer customer = new Customer();
             customer.SetName(txtb_cl_Username.Text);
             customer.SetPassword(txtb_cl_Pasword.Text);
-            DbCustomer.is_account_exist(customer);
-            OpenPage.ActiveForm.Close();
+            if (DbCustomer.is_account_exist(customer))
+            {
+                OpenPage.ActiveForm.Close();
+            }
         }
 
         private void lbl_showPasswordText_MouseMove(object sender, MouseEventArgs e)
@@ -32,7 +34,7 @@ namespace FoodEx
             txtb_cl_Pasword.UseSystemPasswordChar = false;
         }
 
-        private void lbl_showPasswordText_MouseLeave(              object sender, EventArgs e)
+        private void lbl_showPasswordText_MouseLeave(object sender, EventArgs e)
         {
             txtb_cl_Pasword.UseSystemPasswordChar = true;
         }

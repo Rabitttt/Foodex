@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerSignup));
             this.panel_SellerSignin = new System.Windows.Forms.Panel();
             this.pictureBox_ss = new System.Windows.Forms.PictureBox();
             this.txtbMasked_ss_Telephone = new System.Windows.Forms.MaskedTextBox();
@@ -75,7 +74,7 @@
             // 
             // pictureBox_ss
             // 
-            this.pictureBox_ss.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_ss.Image")));
+            this.pictureBox_ss.Image = global::FoodEx.Properties.Resources.addPicture;
             this.pictureBox_ss.Location = new System.Drawing.Point(182, 48);
             this.pictureBox_ss.Name = "pictureBox_ss";
             this.pictureBox_ss.Size = new System.Drawing.Size(141, 93);

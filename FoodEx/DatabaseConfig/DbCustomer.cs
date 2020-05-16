@@ -64,7 +64,7 @@ namespace FoodEx.DatabaseConfig
                 }
             }
         }
-        public static void is_account_exist(Customer customer)
+        public static bool is_account_exist(Customer customer)
         {
             using (SQLiteConnection connection_sqlite = new SQLiteConnection(sqlitedb_connstr))
             {
@@ -78,17 +78,19 @@ namespace FoodEx.DatabaseConfig
                         if (command_sqlite.ExecuteScalar() == null)
                         {
                             MessageBox.Show("Didn't find result match with username and password.", "Not Exist", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
+                            return false;
                         }
                         else
                         {
                             Customer.activeCustomer = Convert.ToInt32(command_sqlite.ExecuteScalar());
+                            return true;
                         }
                     }
                     catch (Exception exception)
                     {
                         MessageBox.Show(exception.Message);
                     }
+                    return false;
                 }
             }
         }

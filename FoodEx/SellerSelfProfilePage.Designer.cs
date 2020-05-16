@@ -346,6 +346,7 @@
             this.pictureBox_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_product.TabIndex = 0;
             this.pictureBox_product.TabStop = false;
+            this.pictureBox_product.Click += new System.EventHandler(this.pictureBox_product_Click);
             // 
             // label12
             // 
@@ -618,6 +619,7 @@
             this.pictureBox_seller.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_seller.TabIndex = 0;
             this.pictureBox_seller.TabStop = false;
+            this.pictureBox_seller.Click += new System.EventHandler(this.pictureBox_seller_Click);
             // 
             // dataGridView_productsOfSeller
             // 
