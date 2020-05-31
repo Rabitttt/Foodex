@@ -28,14 +28,17 @@ namespace FoodEx
             customer.SetImage(pictureBox_cs.ImageLocation);
             if (form_is_valid(customer))
             {
-                DbCustomer.db_AddNewCustomer(customer);
+                if(DbCustomer.db_AddNewCustomer(customer))
+                {
+                    DbCustomer.assign_ActiveUSer(customer);
+                    OpenPage.ActiveForm.Close();
+                }
             }
             else
             {
                 return;
             }
-            DbCustomer.assign_ActiveUSer(customer);
-            OpenPage.ActiveForm.Close();
+            
         }
 
         private bool form_is_valid(Customer customer)

@@ -31,15 +31,17 @@ namespace FoodEx
             //Burada seller nesnesi valid kontrolu yapılacak
             if (form_is_valid(seller))
             {
-                DbSeller.db_AddNewSeller(seller);
+                if (DbSeller.db_AddNewSeller(seller)) //false dönerse kullanıcı adı zaten alınmış
+                {
+                    DbSeller.assign_ActiveUSer(seller);
+                    OpenPage.ActiveForm.Close();
+                }
             }
             else
             {
                 return;
             }
-            DbSeller.assign_ActiveUSer(seller);
-            OpenPage.ActiveForm.Close();
-
+            
         }
         private bool form_is_valid(Seller seller)
         {

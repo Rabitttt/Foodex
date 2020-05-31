@@ -53,8 +53,8 @@
             this.MenuItem_CompanySignin});
             this.menuStrip_openpage.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_openpage.Name = "menuStrip_openpage";
-            this.menuStrip_openpage.Padding = new System.Windows.Forms.Padding(6, 0, 0, 2);
-            this.menuStrip_openpage.Size = new System.Drawing.Size(154, 460);
+            this.menuStrip_openpage.Padding = new System.Windows.Forms.Padding(8, 0, 0, 2);
+            this.menuStrip_openpage.Size = new System.Drawing.Size(156, 566);
             this.menuStrip_openpage.TabIndex = 15;
             this.menuStrip_openpage.Text = "menuStrip1";
             // 
@@ -65,7 +65,7 @@
             this.menuItem_UserLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.menuItem_UserLogin.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.menuItem_UserLogin.Name = "menuItem_UserLogin";
-            this.menuItem_UserLogin.Size = new System.Drawing.Size(141, 25);
+            this.menuItem_UserLogin.Size = new System.Drawing.Size(139, 25);
             this.menuItem_UserLogin.Text = "User Login";
             this.menuItem_UserLogin.Click += new System.EventHandler(this.menuItem_UserLogin_Click);
             // 
@@ -74,7 +74,7 @@
             this.MenuItem_UserSignin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuItem_UserSignin.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.MenuItem_UserSignin.Name = "MenuItem_UserSignin";
-            this.MenuItem_UserSignin.Size = new System.Drawing.Size(141, 25);
+            this.MenuItem_UserSignin.Size = new System.Drawing.Size(139, 25);
             this.MenuItem_UserSignin.Text = "User Sign Up";
             this.MenuItem_UserSignin.Click += new System.EventHandler(this.MenuItem_UserSignin_Click);
             // 
@@ -84,7 +84,7 @@
             this.MenuItem_CompanyLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuItem_CompanyLogin.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.MenuItem_CompanyLogin.Name = "MenuItem_CompanyLogin";
-            this.MenuItem_CompanyLogin.Size = new System.Drawing.Size(141, 25);
+            this.MenuItem_CompanyLogin.Size = new System.Drawing.Size(139, 25);
             this.MenuItem_CompanyLogin.Text = "Company Login";
             this.MenuItem_CompanyLogin.Click += new System.EventHandler(this.MenuItem_CompanyLogin_Click);
             // 
@@ -95,48 +95,54 @@
             this.MenuItem_CompanySignin.ImageTransparentColor = System.Drawing.Color.Yellow;
             this.MenuItem_CompanySignin.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.MenuItem_CompanySignin.Name = "MenuItem_CompanySignin";
-            this.MenuItem_CompanySignin.Size = new System.Drawing.Size(141, 25);
+            this.MenuItem_CompanySignin.Size = new System.Drawing.Size(139, 25);
             this.MenuItem_CompanySignin.Text = "Company Sign Up";
             this.MenuItem_CompanySignin.Click += new System.EventHandler(this.MenuItem_CompanySignin_Click);
             // 
             // customerSignup1
             // 
-            this.customerSignup1.Location = new System.Drawing.Point(158, 0);
+            this.customerSignup1.Location = new System.Drawing.Point(195, 0);
+            this.customerSignup1.Margin = new System.Windows.Forms.Padding(5);
             this.customerSignup1.Name = "customerSignup1";
-            this.customerSignup1.Size = new System.Drawing.Size(492, 460);
+            this.customerSignup1.Size = new System.Drawing.Size(656, 566);
             this.customerSignup1.TabIndex = 19;
+            this.customerSignup1.Load += new System.EventHandler(this.customerSignup1_Load);
             // 
             // customerLogin1
             // 
-            this.customerLogin1.Location = new System.Drawing.Point(158, 0);
+            this.customerLogin1.Location = new System.Drawing.Point(195, 0);
+            this.customerLogin1.Margin = new System.Windows.Forms.Padding(5);
             this.customerLogin1.Name = "customerLogin1";
-            this.customerLogin1.Size = new System.Drawing.Size(492, 460);
+            this.customerLogin1.Size = new System.Drawing.Size(656, 566);
             this.customerLogin1.TabIndex = 18;
             // 
             // sellerLogin1
             // 
-            this.sellerLogin1.Location = new System.Drawing.Point(158, 0);
+            this.sellerLogin1.Location = new System.Drawing.Point(195, 0);
+            this.sellerLogin1.Margin = new System.Windows.Forms.Padding(5);
             this.sellerLogin1.Name = "sellerLogin1";
-            this.sellerLogin1.Size = new System.Drawing.Size(492, 460);
+            this.sellerLogin1.Size = new System.Drawing.Size(656, 566);
             this.sellerLogin1.TabIndex = 17;
             // 
             // sellerSignup1
             // 
-            this.sellerSignup1.Location = new System.Drawing.Point(158, 0);
+            this.sellerSignup1.Location = new System.Drawing.Point(195, 0);
+            this.sellerSignup1.Margin = new System.Windows.Forms.Padding(5);
             this.sellerSignup1.Name = "sellerSignup1";
-            this.sellerSignup1.Size = new System.Drawing.Size(492, 460);
+            this.sellerSignup1.Size = new System.Drawing.Size(656, 566);
             this.sellerSignup1.TabIndex = 16;
             // 
             // OpenPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 460);
+            this.ClientSize = new System.Drawing.Size(856, 566);
             this.Controls.Add(this.customerSignup1);
             this.Controls.Add(this.customerLogin1);
             this.Controls.Add(this.sellerLogin1);
             this.Controls.Add(this.sellerSignup1);
             this.Controls.Add(this.menuStrip_openpage);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "OpenPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OpenPage";

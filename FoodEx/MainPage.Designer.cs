@@ -220,6 +220,7 @@
             this.sellerSelfProfilePage1.Name = "sellerSelfProfilePage1";
             this.sellerSelfProfilePage1.Size = new System.Drawing.Size(1142, 641);
             this.sellerSelfProfilePage1.TabIndex = 21;
+            this.sellerSelfProfilePage1.Load += new System.EventHandler(this.sellerSelfProfilePage1_Load);
             // 
             // foods1
             // 

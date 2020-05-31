@@ -15,7 +15,7 @@ namespace FoodEx.DatabaseConfig
     {
         private static string sqlitedb_connstr = @"Data Source =" + Application.StartupPath + "\\database.db; version=3;";
 
-        public static void db_AddNewSeller(Seller seller)
+        public static bool db_AddNewSeller(Seller seller)
         {
             using (SQLiteConnection connection_sqlite = new SQLiteConnection(sqlitedb_connstr))
             {
@@ -28,19 +28,21 @@ namespace FoodEx.DatabaseConfig
                         command_sqlite.Connection.Open();
                         Seller.activeSeller = command_sqlite.ExecuteNonQuery();
                         MessageBox.Show("Wellcome!  " + Seller.activeSeller, "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+                        return true;
                     }
                     catch (SQLiteException exception)
                     {
                         if (exception.ErrorCode == (int)SQLiteErrorCode.Constraint) //username is not unique
                         {
                             MessageBox.Show("Username is Already Taken!", "Sorry!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
                         }
                         else
                         {
                             MessageBox.Show(exception.Message);
                         }
                     }
+                    return false;
                 }
             }
         }

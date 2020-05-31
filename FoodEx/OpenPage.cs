@@ -71,5 +71,10 @@ namespace FoodEx
             sellerSignup1.BringToFront();
             ShowPanelSellerSignin();
         }
+
+        private void customerSignup1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -134,6 +134,9 @@ namespace FoodEx
             }
         }
 
-        
+        private void sellerSelfProfilePage1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

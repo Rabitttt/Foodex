@@ -123,11 +123,11 @@ namespace FoodEx
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Olive;
-            this.label19.Location = new System.Drawing.Point(799, 31);
+            this.label19.Location = new System.Drawing.Point(776, 31);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(119, 36);
+            this.label19.Size = new System.Drawing.Size(151, 36);
             this.label19.TabIndex = 51;
-            this.label19.Text = "Tatlılar";
+            this.label19.Text = "Desserts";
             // 
             // label20
             // 
@@ -136,20 +136,20 @@ namespace FoodEx
             this.label20.ForeColor = System.Drawing.Color.Olive;
             this.label20.Location = new System.Drawing.Point(197, 33);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(153, 36);
+            this.label20.Size = new System.Drawing.Size(115, 36);
             this.label20.TabIndex = 52;
-            this.label20.Text = "İçecekler";
+            this.label20.Text = "Drinks";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Olive;
-            this.label21.Location = new System.Drawing.Point(443, 33);
+            this.label21.Location = new System.Drawing.Point(452, 33);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(224, 36);
+            this.label21.Size = new System.Drawing.Size(182, 36);
             this.label21.TabIndex = 53;
-            this.label21.Text = "Ana Yemekler";
+            this.label21.Text = "Main Menu";
             // 
             // label22
             // 
@@ -158,9 +158,9 @@ namespace FoodEx
             this.label22.ForeColor = System.Drawing.Color.Olive;
             this.label22.Location = new System.Drawing.Point(197, 33);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(153, 36);
+            this.label22.Size = new System.Drawing.Size(115, 36);
             this.label22.TabIndex = 54;
-            this.label22.Text = "İçecekler";
+            this.label22.Text = "Drinks";
             // 
             // pictureBox_desserts
             // 
